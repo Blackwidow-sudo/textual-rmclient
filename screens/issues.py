@@ -30,6 +30,7 @@ class IssuesScreen(Screen):
         issues = self.get_issues()
         table = self.query_one(DataTable)
         table.add_columns(*self.COLUMNS)
+        table.cursor_type = "row"
 
         for issue in issues:
             table.add_row(
@@ -40,3 +41,6 @@ class IssuesScreen(Screen):
                 issue["priority"]["name"],
                 issue["subject"],
             )
+
+    def on_data_table_row_selected(self, event: DataTable.RowSelected) -> None:
+        pass
