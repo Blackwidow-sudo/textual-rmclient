@@ -8,6 +8,7 @@ class RMClient(App):
         ("i", "switch_mode('issues')", "Issues"),
         ("q", "request_quit", "Quit"),
     ]
+    CSS_PATH = "styles.tcss"
     MODES = {
         "issues": IssuesScreen,
         "quit": QuitModal,
