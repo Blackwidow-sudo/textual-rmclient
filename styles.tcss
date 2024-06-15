@@ -2,6 +2,7 @@ Button {
     width: 100%;
 }
 
+IssueModal,
 QuitModal {
     align: center middle;
 }
@@ -17,6 +18,7 @@ QuitModal {
     width: 60;
 }
 
+#issue,
 #question {
     column-span: 2;
     content-align: center middle;

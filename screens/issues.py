@@ -1,4 +1,5 @@
 import requests
+from modals.issue import IssueModal
 from textual.app import ComposeResult
 from textual.screen import Screen
 from textual.widgets import DataTable, Footer
@@ -43,4 +44,4 @@ class IssuesScreen(Screen):
             )
 
     def on_data_table_row_selected(self, event: DataTable.RowSelected) -> None:
-        pass
+        self.app.push_screen(IssueModal())
