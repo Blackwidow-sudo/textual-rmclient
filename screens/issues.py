@@ -2,7 +2,7 @@ import requests
 from modals.issue import IssueModal
 from textual.app import ComposeResult
 from textual.screen import Screen
-from textual.widgets import DataTable, Footer
+from textual.widgets import DataTable, Footer, Header
 
 
 class IssuesScreen(Screen):
@@ -16,6 +16,7 @@ class IssuesScreen(Screen):
     )
 
     def compose(self) -> ComposeResult:
+        yield Header()
         yield DataTable()
         yield Footer()
 
